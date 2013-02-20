@@ -25,10 +25,8 @@ require.config({
         "text" : "requirejs-text/text",
         /*Defininf Triskelion code*/
         "class" : "triskelion/core/class",
-        /*TK Log*/
-        "log" : "triskelion/utils/log/collections/log",
-        "logentry" : "triskelion/utils/log/model/log_entry",
-        "logview" : "triskelion/utils/log/views/log_view"
+        "log" : "triskelion/utils/log/setup",
+        "reader" : "triskelion/core/reader/setup"
 	},
 
 	shim: {
@@ -50,18 +48,9 @@ require.config({
         'class' : {
             exports: 'Class'
         },
-        /*Logs*/
-        'logentry' : {
-            deps: ['backbone'],
-            exports: 'LogEntry'
-        },
-        'logview': {
-            deps: ['backbone', 'underscore', 'jquery'],
-            exports: 'LogView'  
-        },
-        'log' : {
-            deps: ['backbone', 'logentry','logview'],
-            exports: 'Log'
+
+        'reader': {
+            deps: ['backbone', 'underscore', 'jquery']
         }
 	}
 });
@@ -70,6 +59,6 @@ require(['bootstrap', 'text'], function(bootstrap) {
 	//Just load the damn thing!
 });
 
-require(['views/app'], function(AppView) {
+require(['views/app', 'reader'], function(AppView, reader) {
 	new AppView;
 });

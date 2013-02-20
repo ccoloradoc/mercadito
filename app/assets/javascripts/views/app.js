@@ -1,11 +1,9 @@
-define(['backbone', 'jquery', 'logview', 'log'], function(Backbone, $, LogView, Log) {
+define(['backbone', 'jquery', 'log'], function(Backbone, $, log) {
 
 	var App = Backbone.View.extend({
 		initialize: function() {
 			
-			var collection = new Log();
-			var  view = new LogView({'collection': collection});
-			view.info('header', 'content');
+			log.info('header', 'content');
 
 			$('.main.container').append($('<h2>Hey there baby!</h2>'));
 		}
