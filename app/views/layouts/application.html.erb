@@ -12,7 +12,11 @@
 		<div class="main container">
 		<%= render 'layouts/header' %>
 		<%= render 'layouts/main_menu' %>
-		<%= yield %>
+		<div class="row">
+			<div class="span8">
+				<%= yield %>
+			</div>
+		</div>
 		<%= render 'layouts/footer' %>
 		</div>
 		<div id="log" class="container"></div>
