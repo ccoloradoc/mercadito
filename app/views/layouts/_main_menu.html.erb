@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="span12">
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <!--a class="brand" href="#">Project name</a-->
+		  <div class="nav-collapse collapse">
+			<div class="menu-main-container">
+				<ul id="menu-main" class="nav">
+					<li class="menu-item active">
+						<!--a href="http://www.mrdf.tv">Home</a-->
+						<%= link_to "Home", root_path %>
+					</li>
+					<li class="menu-item"><a href="http://blog.mrdf.tv">Blog</a></li>
+					<li class="menu-item"><a href="http://forum.mrdf.tv">Foro</a></li>
+				</ul>
+			</div>	
+			<form id="searchform" class="navbar-search pull-right" method="get" action="http://blog.mrdf.tv/">
+				<label for="s" class="assistive-text hidden">Search</label>
+				<input type="search" class="search-query" name="s" id="s" placeholder="Search">
+			</form>		
+			</div><!--/.nav-collapse -->
+		</div>
+	  </div>
+	</div>
+	</div>
+</div>

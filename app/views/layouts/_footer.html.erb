@@ -1,0 +1,50 @@
+﻿<footer class="footer">
+  <%= render 'layouts/footer_menu' %>
+  <div class="row">
+	<div class="span12 footer-div"></div>
+  </div>
+  <div id="page-footer" class="well clearfix">
+		<div class="row">
+			<div class="span4">
+				<ul class="credit-bullets">
+					<li><a href="mailto:contacto@mrdf.tv?subject=MRDF:Contacto">Contactanos</a></li>
+					<li><a href="mailto:adverticement@mrdf.tv?subject=MRDF:Anuncios">Anunciate con nosotros</a></li>
+					<li><a href="http://www.mrdf.tv/equipo.html">Integrate a nuestro equipo</a></li>
+				</ul>
+			</div>
+			<div class="span3">
+				<ul class="credit-bullets">
+					
+				</ul>
+			</div>
+			<div class="span4">
+				<ul class="credit-bullets">
+					<li class="muted credit">Managed by  <a href="http://augustoledesma.com" target="_blank">Augusto Ledesma</a>.</li>
+					<li class="muted credit">Developed by  <a href="http://triskelion-sys.com" target="_blank">Triskelion Sys</a>.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<ul class="breadcrumb credit-box">
+				<li>
+					<!--a href="http://www.mrdf.tv">MRDF</a> &copy; 2013 <span class="divider">/</span-->
+					<%= link_to "MRDF", root_path %> &copy; 2013 <span class="divider">/</span>
+				</li>
+				<li>
+					<!--a href="http://www.mrdf.tv/privacy.html">Privacidad de datos personales</a> <span class="divider">/</span-->
+					<%= link_to "Privacidad", privacy_path %> <span class="divider">/</span>
+				</li>
+				<li>
+					<!--a href="http://www.mrdf.tv/terms.html">Terminos de Servicio</a> <span class="divider">/</span-->
+					<%= link_to "Terminos", terms_path %> <span class="divider">/</span>
+				</li>
+				<li>
+					<%= link_to "Equipo", team_path %> <span class="divider">/</span>
+				</li>
+				<li>
+					<%= link_to "About", about_path %> 
+				</li>
+			<ul>
+		</ul></ul></div>
+	</div>
+</footer>

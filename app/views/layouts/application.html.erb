@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Mercadito | <%= yield :title %></title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%# require_file to be provided by rendered file%>
+	  <%= requirejs_include_tag yield :require_file %>
+	  <%= csrf_meta_tags %>
+	  <%= render 'layouts/shim' %> 
+	</head>
+	<body>
+		<div class="main container">
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/main_menu' %>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+		</div>
+		<div id="log" class="container"></div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+/*
+*	Author> Cristian Colorado
+*	Copyright 2012 - Triskelion Sys
+*
+*/
+
+div.log {
+	margin: 2px;
+	padding: 5px;
+	background-color:	#DDDDDD;
+	border-radius: 5px;
+}
+
+div.log div.logHdr{
+	margin: 2px;
+	padding: 5px;
+	color: #FFFFFF;
+	background-color:	#2E9AFE;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+div.log div.logCnt{
+	margin: 2px;
+	padding: 5px;
+	background-color:	#CECEF6;
+	border-radius: 5px;
+	font-size: 8px;
+}
+
+div.log div.logCnt:hover {
+	font-size: 10px;
+}
+
+div.log div.logCnt p{
+	margin:0;
+}

@@ -1,0 +1,149 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@CHARSET "ISO-8859-1";
+
+div.column {
+  vertical-align: middle;
+  display: inline-block; 
+  clear: both;
+} 
+
+img.wrap {
+  width: 100%;
+  border-radius:2px;
+}
+
+.mkt-modal-header {
+  background-color: #D1172B;
+  color: white;
+}
+
+.mkt-modal-body {
+  max-height: 450px;
+}
+
+/*Header*/
+.header-row {
+  padding: 5px 0px;
+}
+.social-bar {
+  padding-top: 25px
+}
+.social-bar a {
+  padding-left: 15px;
+}
+
+.profile {
+  background-color: #d1172b;
+  padding: 2px 2px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  border-radius:2px;
+}
+
+/*Footer*/
+.footer-div { 
+  /*background-color: #FA4652;*/ 
+  background-color: #D1172B;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: 20px;
+  border-radius:2px;
+}
+
+/*Search Panel*/
+.searchPanel {
+  background-color: #F6F6F6;
+  border: 1px solid #D4D4D4;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.searchPanel form {
+  margin: 0px;
+}
+
+/*Legal*/
+.legal p {
+  color: #51545c;
+  text-align:justify;
+  text-justify:inter-word;
+}
+
+/*Social Nav Bar*/
+.social-nav {
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.social-nav > li {
+  display: inline-block;
+}
+
+/*widget style*/
+.widget {
+  padding: 0;
+}
+
+.widget-title {
+  clear: both;
+  margin-top: 0;
+  font-family: 'MyriadPro-Semibold',"Calibri","Gill Sans","Verdana";
+  font-size: 16px;
+  color: white;
+  background: #999;
+  background-color: #D1172B;
+  border-radius: 5px 5px 0 0;
+  padding: 4px 0 3px 15px;
+  letter-spacing: -1px;
+}
+
+.widget form{
+  padding-left: 10px;
+}
+
+.widget .carousel.slide img {
+  width: 100%;
+}
+.widget li{
+  list-style: none;
+}
+
+/*Youtube*/
+.entry-content iframe {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/*footer credits*/
+.credit-bullets {
+  list-style:none;
+}
+
+.credit-box {
+  float: right;
+}
+
+.credit-box  a{
+  color: #787878;
+  display: inline-block;
+  line-height: 16px;
+}
+
+.worpress-credit {
+  background: url("img/wordpress.png") no-repeat scroll left center transparent;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.profile a {
+  color: blue;
+}
+
+a {
+  color: #D1172B;
+}

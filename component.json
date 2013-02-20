@@ -1,0 +1,12 @@
+{
+	"name":"Mercadito Home",
+	"version":"1.0.0",
+	"dependencies":{
+		"bootstrap.css": null,
+		"jquery":null,
+		"backbone-amd":null,
+		"underscore-amd":null,
+		"requirejs":null,
+		"requirejs-text":null
+	}
+}

@@ -1,0 +1,345 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Log",
+				"LogEntry"
+			],
+			[
+				"scr",
+				"script"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lib/assets/javascripts/triskelion/utils/log/collections/log.js",
+			"settings":
+			{
+				"buffer_size": 280,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/assets/javascripts/triskelion/utils/log/model/log_entry.js",
+			"settings":
+			{
+				"buffer_size": 330,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/app.js",
+			"settings":
+			{
+				"buffer_size": 279,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/*\n*	Author> Cristian Colorado\n*	Copyright 2012 - Triskelion Sys\n*\n*/\n\n/*Snippet for log object*/\ndefine(['backbone'], function(Backbone){\n\n\n	var Log = function() {};\n\n	Log.LogEntry = Backbone.Model.extend({\n		defaults: {\n			header: 'Header',\n			content: 'Output Content',\n			clazz: 'info'\n		},\n\n		initialize: function() {\n\n		}\n\n	});\n\n	Log.LogController = Backbone.Collection.extend({\n		model: LogEntry\n	});\n\n	Log.LogView = Backbone.View.extend({\n		options: {\n			template: tcode	,\n			el: $('#log')\n		},\n\n		initialize: function() {\n			//_.bindAll(this, this.render);\n			this.collection.bind('add', this.render, this);\n		},\n\n		render: function(entry) {\n			console.log(entry);\n			var template = _.template(this.options.template, entry.toJSON());\n			this.$el.append($(template));\n		},\n\n		info: function(hdr, cnt) {\n			this.collection.add({\n				header: hdr,\n				content: cnt\n			});\n		}\n	});\n\n\n	\n	return Log;\n});",
+			"settings":
+			{
+				"buffer_size": 906,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"package Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			]
+		],
+		"width": 220.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Sites/mercadito/app/assets/javascripts/application.js",
+		"/C/Sites/mercadito/vendor/assets/javascripts/configure.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/configure.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/collections/log.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/views/log_view.js",
+		"/C/Sites/mercadito/component.json",
+		"/C/Sites/mercadito/vendor/assets/javascripts/backbone-amd/backbone.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/templates/log_entry.html",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/model/log_entry.js",
+		"/C/Sites/mercadito/app/assets/javascripts/application_bkp.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/namespace.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log_manager.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/log/collenctions/log.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/core/class.js",
+		"/C/Sites/mercadito/app/assets/stylesheets/application.css",
+		"/C/Sites/mercadito/app/views/layouts/application.html.erb",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/utils/LogManager.js",
+		"/C/Sites/mercadito/lib/assets/javascripts/triskelion/core/Class.js",
+		"/C/Colibri/js-sandbox/requirejs/index.html",
+		"/C/Colibri/js-sandbox/requirejs/app/index.html",
+		"/C/Colibri/js-sandbox/requirejs/app/script/views",
+		"/C/Colibri/js-sandbox/requirejs/app/scripts/vendor/underscore-amd/underscore.js",
+		"/C/Colibri/SublimeTxt/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Colibri/js-sandbox/requirejs/app/js/some.js",
+		"/C/Colibri/js-sandbox/requirejs/require.sublime-project",
+		"/C/Colibri/js-sandbox/requirejs/require.sublime-workspace",
+		"/C/Colibri/SublimeTxt/Data/Packages/Default/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"config",
+			"config(",
+			"config",
+			"        \"log\" : \"triskelion/utils/log_manager\"",
+			"        \"",
+			"folder"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lib/assets/javascripts/triskelion/utils/log/collections/log.js",
+					"settings":
+					{
+						"buffer_size": 280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								145,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/assets/javascripts/triskelion/utils/log/model/log_entry.js",
+					"settings":
+					{
+						"buffer_size": 330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								308,
+								308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/views/app.js",
+					"settings":
+					{
+						"buffer_size": 279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 9.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								781,
+								781
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\Sites\\mercadito\\lib\\assets\\javascripts\\triskelion\\utils\\log",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.440714908457,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Sites/mercadito/mercadito.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true
+}
