@@ -1,0 +1,86 @@
+<div class="postBox" fb-id="<%= fb_id %>">
+	<div class="header">
+		<div class="column headerPic">
+			<a href="http://www.facebook.com/<%= post_user_fbid %>" target="_blank">
+				<img src="<%= post_user_picture %>" class="wrap"/>
+			</a>
+		</div>
+		<div class="column headerContent">
+			<span class="title"><%= post_type %> - <%= post_title %></span></br>
+			<span class="userName">by: <%= post_user_name %></span>
+		</div>
+		<div class="arrow post-toggle column">
+			<img class="up wrap" src="./assets/triskelion/core/reader/arrow-up.png"/>
+			<img class="down wrap" src="./assets/triskelion/core/reader/arrow-down.png"/>
+		</div>
+	</div>
+	
+	<div class="content">
+		<div class="row-fluid mainContentElement">
+			<div class="image paralellContentElement span6">
+				<a href="<%= fb_link %>" target="_blank">
+					<img class="wrap" src="<%= fb_img_link %>"/>
+				</a>
+			</div>
+			<div class="details paralellContentElement span6">
+				<p>
+					<span class="title">Descripcion: </span><span class="text"><%= post_description %></span>
+					<br/><span class="title">Envio: </span><span class="text"><%= post_shipping %></span>
+					<br/><span class="title">Costo: </span><span class="text">$<%= post_cost %></span>
+					<br/><span class="title">Keywords: </span><span class="text"><%= post_keyword %></span>
+					<br/><span class="link"><a href="http://<%= post_ext_ref %>" target="_blank">Referencia Externa</a></span>
+				</p>
+			</div>
+		</div>
+		<div class="actions contentElement">
+			<div class="do-like column" fb-id="<%= fb_id %>"><span class="btn btn-link">Like&nbsp;</span></div>
+			<div class="do-comment column" fb-id="<%= fb_id %>"><span class="btn btn-link">Comment&nbsp;</span></div>
+		</div>
+		
+		<div class="options contentElement">
+			<div class="likes raw optionElement bottomLine" fb-id="<%= fb_id %>" likes="<%= like_count %>" user-likes="<%= user_likes %>">
+				<div class="iterator">
+					<input type="hidden" class="param" id="limit" value="25">
+					<input type="hidden" class="param" id="offset" value="0">
+					<input type="hidden" class="param" id="__after_id" value="0">
+					<input type="hidden" class="param" id="__before_id" value="0">
+				</div>
+				<div id="likes_<%= fb_id %>" class="likesContent" >
+					<div class="more like column" params="limit|offset"><img src="./assets/triskelion/core/reader/thumbUp.gif"/></div>
+				</div>
+			</div>
+			<div id="comments_<%= fb_id %>" class="comments optionElement" fb-id="<%= fb_id %>">
+				<div class="iterator">
+					<input type="hidden" class="param" id="limit" value="25">
+					<input type="hidden" class="param" id="offset" value="0">
+					<input type="hidden" class="param" id="__after_id" value="0">
+					<input type="hidden" class="param" id="__before_id" value="0">
+				</div>
+				<div class="commentsContent"></div>
+				<div class="comment-box bottomLine">
+					<div class="commentHeader">
+						<div class="headerPic column">
+							<a href="#"><img class="wrap" src="<%= post_user_picture %>"/></a>
+						</div>
+						<div class="headerContent column">
+							<span class="userName"><%= post_user_name %></span> </br>
+							<textarea class="content" rows="1" cols="25" placeholder="Comentario"></textarea>
+						</div>
+						<div class="arrow submit-comment column">
+							<img class="wrap" src="./assets/triskelion/core/reader/dark-arrow-right.png"/>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="more column" params="limit|__after_id">
+						<span>See Comments</span>
+					</div>
+					<div class="arrow comment-toggle column">
+						<img class="up wrap" src="./assets/triskelion/core/reader/dark-arrow-up.png"/>
+						<img class="down wrap" src="./assets/triskelion/core/reader/dark-arrow-down.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

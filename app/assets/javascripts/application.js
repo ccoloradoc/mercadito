@@ -26,7 +26,8 @@ require.config({
         /*Defininf Triskelion code*/
         "class" : "triskelion/core/class",
         "log" : "triskelion/utils/log/setup",
-        "reader" : "triskelion/core/reader/setup"
+        "reader" : "triskelion/core/reader/setup",
+        "wp-reader" : "triskelion/core/wp-reader/setup"
 	},
 
 	shim: {
@@ -59,6 +60,6 @@ require(['bootstrap', 'text'], function(bootstrap) {
 	//Just load the damn thing!
 });
 
-require(['views/app', 'reader'], function(AppView, reader) {
+require(['views/app', 'wp-reader'], function(AppView, reader) {
 	new AppView;
 });
