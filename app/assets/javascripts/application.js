@@ -25,7 +25,8 @@ require.config({
         "text" : "requirejs-text/text",
         /*Defininf Triskelion code*/
         "class" : "triskelion/core/class",
-        "log" : "triskelion/utils/log/setup",
+        //"log" : "triskelion/utils/log/setup",
+        "log" : "triskelion/utils/log_manager",
         "reader" : "triskelion/core/reader/setup",
         "wp-reader" : "triskelion/core/wp-reader/setup"
 	},
@@ -56,7 +57,7 @@ require.config({
 	}
 });
 
-require(['bootstrap', 'text'], function(bootstrap) {
+require(['bootstrap', 'text', 'log'], function(bootstrap) {
 	//Just load the damn thing!
 });
 

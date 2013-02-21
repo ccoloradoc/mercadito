@@ -1,0 +1,27 @@
+div.blog-summary {
+    position: relative;
+	border-style: solid;
+	border-width: 1px;
+	width: auto;
+}
+
+div.blog-summary div.category div.header {
+    background-color: #d1172b;
+    padding: 2px 17px;
+	border-top-style:solid;
+	border-color:red;
+	border-width:1px;
+}
+
+div.header span{
+	color: #ffffff;
+}
+
+div.header span.title {
+	font-weight:bold;
+	font-size:1.3em;
+}
+
+div.post div.content {
+	padding: 2px 17px;
+}
